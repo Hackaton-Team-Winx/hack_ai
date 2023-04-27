@@ -1,9 +1,9 @@
-# Default values for PLUGIN_NAME.
+# Default values for hack_ai.
 # Declare variables to be passed into your templates.
-fullnameOverride: PLUGIN_NAME
+fullnameOverride: hack_ai
 replicaCount: 1
 image:
-    repository: PLUGIN_NAME
+    repository: hack_ai
     tag: #{Build.BuildId}#
     pullPolicy: IfNotPresent
     imagePullSecretName: acr-takeprivate-secret
@@ -43,7 +43,7 @@ environment:
     stage: staging
 
 appSettings:
-    configMap: PLUGIN_NAME
+    configMap: hack_ai
     path: /app/src/config/appsettings.json
     subPath: appsettings.json
 

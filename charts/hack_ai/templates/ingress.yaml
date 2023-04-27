@@ -1,12 +1,12 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "PLUGIN_NAME.fullname" . -}}
+{{- $fullName := include "hack_ai.fullname" . -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ template "PLUGIN_NAME.fullname" . }}-{{ .Values.environment.stage }}
+  name: {{ template "hack_ai.fullname" . }}-{{ .Values.environment.stage }}
   labels:
-    app: {{ template "PLUGIN_NAME.name" . }}
-    chart: {{ template "PLUGIN_NAME.chart" . }}
+    app: {{ template "hack_ai.name" . }}
+    chart: {{ template "hack_ai.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 {{- with .Values.ingress.annotations }}
@@ -25,7 +25,7 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: {{ template "PLUGIN_NAME.fullname" . }}-{{ .Values.environment.stage }}
+                name: {{ template "hack_ai.fullname" . }}-{{ .Values.environment.stage }}
                 port:
                   name: http
   tls: 
