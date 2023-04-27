@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "appsettings",
+    "classname",
+    "datetime",
+    "semibold",
+    "tailwindcss"
+  ],
+  "scss.lint.unknownAtRules": "ignore"
+}
