@@ -85,102 +85,19 @@ function Home() {
                     {t('paragraph.homeDescription.part1')}
                 </p>
                 <div className="relative overflow-x-auto">
-                    <div className="... columns-3">
-                        <div className="relative mt-4">
-                            <label
-                                title="Click to upload"
-                                htmlFor="button2"
-                                className="dark:before:bg-darker group flex cursor-pointer items-center gap-4 px-6 py-4 before:absolute before:inset-0 before:rounded-3xl  before:border-gray-400/60 before:bg-gray-100 before:transition-transform before:duration-300 hover:before:scale-105 hover:before:border-gray-300 active:duration-75 active:before:scale-95 dark:before:border-gray-600 dark:hover:before:border-gray-500"
-                            >
-                                <div className="relative w-max">
-                                    <img
-                                        className="w-12"
-                                        src="https://www.svgrepo.com/show/507878/upload.svg"
-                                        alt="file upload icon"
-                                        width="512"
-                                        height="512"
-                                    />
-                                </div>
-                                <div className="relative">
-                                    <span className="relative block text-base font-semibold text-blue-900 group-hover:text-blue-500 dark:text-white">
-                                        Faça o upload da sua imagem aqui
-                                    </span>
-                                    <span className="mt-0.5 block text-sm text-gray-500 dark:text-gray-400">
-                                        Apenas imagens em .jpg ou .png com até
-                                        10mb
-                                    </span>
-                                </div>
-                            </label>
-                            <input
-                                type="file"
-                                name="button2"
-                                onChange={imageHandler}
-                                id="button2"
-                                accept=".gif,.jpg,.jpeg,.png"
-                            />
-                            <div className="absolute flex items-center justify-center gap-2">
-                                <img
-                                    className={`h-10 w-10 rounded-full ${
-                                        checkFile ? 'opacity-1' : 'opacity-0'
-                                    }`}
-                                    src={
-                                        selectedFile
-                                            ? URL.createObjectURL(selectedFile)
-                                            : null!
-                                    }
-                                />
-                            </div>
-                        </div>
-                        <div className="relative mt-4">
-                            <div className="flex h-screen items-center justify-center bg-gray-300 px-2">
-                                <div className="grid w-[320px] gap-2">
-                                    <div className="relative flex h-24 cursor-pointer items-center justify-center rounded-md border-2 bg-gray-200">
-                                        <input
-                                            type="file"
-                                            name="file"
-                                            onChange={imageHandler}
-                                            className="z-20 h-full w-full cursor-pointer opacity-0"
-                                        />
-                                        <div className="absolute flex items-center justify-center gap-2">
-                                            <img
-                                                className={`h-10 w-10 rounded-full ${
-                                                    checkFile
-                                                        ? 'opacity-1'
-                                                        : 'opacity-0'
-                                                }`}
-                                            />
-                                            <span className="w-56 truncate text-[18px]">
-                                                {checkFile
-                                                    ? (selectedFile as any).name
-                                                    : 'choose a file'}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <button
-                                        onClick={imagesubmission}
-                                        className="h-14 w-full rounded-md bg-green-600 text-white"
-                                    >
-                                        Upload
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            <div className=" relative mt-4">
-                                <input
-                                    type="url"
-                                    className="peer-focus:text-primary dark:peer-focus:text-primary peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                    id="InputURL"
-                                    placeholder="Example label"
-                                />
-                                <label
-                                    htmlFor="FormControlInputURL"
-                                    className="peer-focus:text-primary dark:peer-focus:text-primary pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
-                                >
-                                    URL da imagem
-                                </label>
-                            </div>
-                        </p>
+                    <div className=" relative mt-4">
+                        <input
+                            type="url"
+                            className="peer-focus:text-primary dark:peer-focus:text-primary peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="InputURL"
+                            placeholder="Example label"
+                        />
+                        <label
+                            htmlFor="FormControlInputURL"
+                            className="peer-focus:text-primary dark:peer-focus:text-primary pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200"
+                        >
+                            URL da imagem
+                        </label>
                     </div>
                 </div>
             </div>
