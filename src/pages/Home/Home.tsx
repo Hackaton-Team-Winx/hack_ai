@@ -132,11 +132,38 @@ function Home() {
                             </div>
                         </div>
                         <div className="relative mt-4">
-                            <img
-                                id="imageInput"
-                                alt="previsão da imagem"
-                                className="img-preview sticky h-full w-full bg-fixed object-cover"
-                            />
+                            <div className="flex h-screen items-center justify-center bg-gray-300 px-2">
+                                <div className="grid w-[320px] gap-2">
+                                    <div className="relative flex h-24 cursor-pointer items-center justify-center rounded-md border-2 bg-gray-200">
+                                        <input
+                                            type="file"
+                                            name="file"
+                                            onChange={imageHandler}
+                                            className="z-20 h-full w-full cursor-pointer opacity-0"
+                                        />
+                                        <div className="absolute flex items-center justify-center gap-2">
+                                            <img
+                                                className={`h-10 w-10 rounded-full ${
+                                                    checkFile
+                                                        ? 'opacity-1'
+                                                        : 'opacity-0'
+                                                }`}
+                                            />
+                                            <span className="w-56 truncate text-[18px]">
+                                                {checkFile
+                                                    ? (selectedFile as any).name
+                                                    : 'choose a file'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={imagesubmission}
+                                        className="h-14 w-full rounded-md bg-green-600 text-white"
+                                    >
+                                        Upload
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <p>
                             <div className=" relative mt-4">
