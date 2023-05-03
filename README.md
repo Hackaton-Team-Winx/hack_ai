@@ -1,3 +1,6 @@
+[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://hack-ai-eta.vercel.app/)
+[![Replit](https://img.shields.io/badge/Replit-DD1200?style=for-the-badge&logo=Replit&logoColor=white)](https://hackai.lauanyreis3.repl.co/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a47b393385184ae5bd95fc64f688a3f9)](https://app.codacy.com/gh/Hackaton-Team-Winx/hack_ai/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 # BLiP extension template React JS
 
 [![Blip-plugin](https://imgur.com/B8dPNgk.png 'Blip-plugin')][blip]
