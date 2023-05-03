@@ -1,19 +1,12 @@
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
-import { Configuration, OpenAIApi } from 'openai';
 import axios from 'axios';
-
-import Logo from 'components/Logo';
 
 function Home() {
     const { t } = useTranslation();
     const { useState } = React;
     const [selectedFile, setSelectedFile] = useState();
     const [checkFile, setCheckFile] = useState(false);
-    const configuration = new Configuration({
-        apiKey: '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'
-    });
-    const openai = new OpenAIApi(configuration);
 
     const imageHandler = (e: any) => {
         setSelectedFile(e.target.files[0]);
@@ -27,22 +20,6 @@ function Home() {
             'trascriptText'
         ) as HTMLInputElement;
         if (checkFile) {
-            /*  const imageSrc = imageInput.src;
-            const transcription = handleImageTranscription(imageSrc);
-            console.log('Transcrição:', transcription);
-            const file = imageInput;
-            const reader = new FileReader();
-
-            imageInput.onload = async () => {
-                const transcription = await handleImageTranscription(imageSrc);
-                console.log('Transcrição:', transcription);
-            };
-
-           reader.onload = async () => {
-                const imageSrc = reader.result as string;
-                const transcription = await handleImageTranscription(imageSrc);
-                console.log('Transcrição:', transcription);
-            };*/
             alert(selectedFile);
         } else {
             const url =
@@ -79,7 +56,7 @@ function Home() {
     };
 
     return (
-        <div className="flex h-full flex-col items-center justify-center py-24 text-neutral-dark-city">
+        <div className="text-neutral-dark-city flex h-full flex-col items-center justify-center py-24">
             <div className="mt-4">
                 <p className="text-center">
                     {t('paragraph.homeDescription.part1')}
